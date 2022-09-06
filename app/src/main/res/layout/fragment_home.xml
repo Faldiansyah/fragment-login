@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageViewHome"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="52dp"
@@ -43,7 +43,7 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageViewHome" />
 
         <EditText
             android:id="@+id/editTextUmurHome"
@@ -56,7 +56,7 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:hint="Input tahun lahir"
-            android:inputType="textPersonName"
+            android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"

@@ -69,7 +69,17 @@
         android:id="@+id/fragmentHome"
         android:name="com.cowok.hijrah.chapter3topic4.FragmentHome"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentHitung"
+            app:destination="@id/fragmentHitung" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+        <argument
+            android:name="argumentsHome"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentRegister"
         android:name="com.cowok.hijrah.chapter3topic4.FragmentRegister"
@@ -94,4 +104,25 @@
         android:name="com.cowok.hijrah.chapter3topic4.FragmentLupaPassword"
         android:label="fragment_lupa_password"
         tools:layout="@layout/fragment_lupa_password" />
+    <fragment
+        android:id="@+id/fragmentHitung"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentHitung"
+        android:label="fragment_hitung"
+        tools:layout="@layout/fragment_hitung" >
+        <argument
+            android:name="argumentsHitung"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_fragmentProfile_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+        <argument android:name="argumentsProfile"
+            app:argType="string" />
+    </fragment>
+    <fragment android:id="@+id/placeholder" />
 </navigation>
