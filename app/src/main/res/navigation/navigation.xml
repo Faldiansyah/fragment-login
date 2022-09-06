@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentSatu">
+
+    <fragment
+        android:id="@+id/fragmentSatu"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentSatu"
+        android:label="fragment_satu"
+        tools:layout="@layout/fragment_satu" >
+        <action
+            android:id="@+id/action_fragmentSatu_to_fragmentDua"
+            app:destination="@id/fragmentDua" />
+        <action
+            android:id="@+id/action_fragmentSatu_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDua"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentDua"
+        android:label="fragment_dua"
+        tools:layout="@layout/fragment_dua" >
+        <action
+            android:id="@+id/action_fragmentDua_to_fragmentTiga"
+            app:destination="@id/fragmentTiga" />
+        <action
+            android:id="@+id/action_fragmentDua_to_fragmentSatu"
+            app:destination="@id/fragmentSatu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTiga"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentTiga"
+        android:label="fragment_tiga"
+        tools:layout="@layout/fragment_tiga" >
+        <action
+            android:id="@+id/action_fragmentTiga_to_fragmentSatu"
+            app:destination="@id/fragmentSatu" />
+        <action
+            android:id="@+id/action_fragmentTiga_to_fragmentDua"
+            app:destination="@id/fragmentDua" />
+        <argument
+            android:name="dataumur"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentRegister"
+            app:destination="@id/fragmentRegister" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHelp"
+            app:destination="@id/fragmentHelp" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentChats"
+            app:destination="@id/fragmentChats" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentLupaPassword"
+            app:destination="@id/fragmentLupaPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/fragmentRegister"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentRegister"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHelp"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentHelp"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/fragmentChats"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentChats"
+        android:label="fragment_chats"
+        tools:layout="@layout/fragment_chats" />
+    <fragment
+        android:id="@+id/fragmentLupaPassword"
+        android:name="com.cowok.hijrah.chapter3topic4.FragmentLupaPassword"
+        android:label="fragment_lupa_password"
+        tools:layout="@layout/fragment_lupa_password" />
+</navigation>
